@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
-import videoTextSlice from '@/store/video-text-slice.ts';
+import videoTextSlice from './video-text-slice.ts';
 
 const store = configureStore({
     reducer: {

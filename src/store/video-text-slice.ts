@@ -6,7 +6,8 @@ export const videoTextSlice = createSlice({
         // 输入的文字
         text: 'An unexamined life is not worth living',
         // 输入文字后调用tts获取的Blob url
-        audioBlobUrl: ''
+        audioBlobUrl: '',
+        position: {offsetX: 0, offsetY: 600}
     },
     reducers: {
         videoChangeText: (state, action) => {
@@ -14,9 +15,12 @@ export const videoTextSlice = createSlice({
         },
         audioBlobUrlChange: (state, action) => {
             state.audioBlobUrl = action.payload;
+        },
+        setTitlePosition: (state, action) => {
+            state.position = action.payload;
         }
     }
 });
 
-export const {videoChangeText, audioBlobUrlChange} = videoTextSlice.actions;
+export const {videoChangeText, audioBlobUrlChange, setTitlePosition} = videoTextSlice.actions;
 export default videoTextSlice.reducer;

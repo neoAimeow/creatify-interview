@@ -2,7 +2,7 @@ import {spring, useCurrentFrame, useVideoConfig, Audio} from 'remotion';
 import Draggable from 'react-draggable';
 import {useRef} from 'react';
 import {useSelector} from 'react-redux';
-import {RootState} from '@/store/store.ts';
+import {RootState} from '../store/store.ts';
 
 export const MyVideo = () => {
     const frame = useCurrentFrame();
