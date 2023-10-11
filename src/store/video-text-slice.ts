@@ -3,7 +3,9 @@ import {createSlice} from '@reduxjs/toolkit';
 export const videoTextSlice = createSlice({
     name: 'videoText',
     initialState: {
-        text: 'Init text',
+        // 输入的文字
+        text: 'An unexamined life is not worth living',
+        // 输入文字后调用tts获取的Blob url
         audioBlobUrl: ''
     },
     reducers: {
@@ -11,7 +13,6 @@ export const videoTextSlice = createSlice({
             state.text = action.payload;
         },
         audioBlobUrlChange: (state, action) => {
-            console.error(action.payload);
             state.audioBlobUrl = action.payload;
         }
     }

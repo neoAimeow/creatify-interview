@@ -50,10 +50,10 @@ export const textToSpeak = async (text: string): Promise<string> => {
             if (response.status === 200) {
                 resolve(URL.createObjectURL(response.data));
             } else {
-                reject();
+                reject(response.data);
             }
         } catch (error) {
-            reject();
+            reject(error);
         }
     });
 };

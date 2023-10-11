@@ -30,8 +30,12 @@ const App = () => {
                 <button
                     className='bg-amber-500 mt-5 ml-5 mr-5'
                     onClick={async () => {
-                        dispatch(audioBlobUrlChange(await textToSpeak(videoText)));
-                        player && player.current && player.current.play();
+                        try {
+                            dispatch(audioBlobUrlChange(await textToSpeak(videoText)));
+                            player && player.current && player.current.play();
+                        } catch (ex) {
+                            console.error(ex);
+                        }
                     }}
                 >
                     play
@@ -41,7 +45,7 @@ const App = () => {
                 ref={player}
                 style={{backgroundColor: 'gray'}}
                 component={MyVideo}
-                durationInFrames={60}
+                durationInFrames={120}
                 compositionWidth={1920}
                 compositionHeight={1080}
                 fps={30}
