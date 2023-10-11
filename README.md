@@ -1,3 +1,8 @@
+### Demo
+```
+https://neoaimeow.github.io/creatify-interview/
+```
+
 ### how to run this project:
 1. yarn install
 2. yarn run dev
