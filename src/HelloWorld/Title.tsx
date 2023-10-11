@@ -7,6 +7,7 @@ const title: React.CSSProperties = {
     fontWeight: 'bold',
     fontSize: 100,
     textAlign: 'center',
+    bottom: 300,
     position: 'absolute',
     width: '100%'
 };

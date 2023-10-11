@@ -10,7 +10,7 @@ import {HelloWorld} from './HelloWorld.tsx';
 const App = () => {
     const player = useRef<PlayerRef>(null);
     const dispatch = useDispatch();
-    const {text, audioBlobUrl, position} = useSelector<
+    const {text, audioBlobUrl} = useSelector<
         RootState,
         {text: string; audioBlobUrl: string; position: {offsetX: number; offsetY: number}}
     >((state) => state.videoText);
@@ -42,7 +42,7 @@ const App = () => {
             </div>
             <Player
                 ref={player}
-                component={() => <HelloWorld text={text} audioBlobUrl={audioBlobUrl} position={position} />}
+                component={() => <HelloWorld text={text} audioBlobUrl={audioBlobUrl} />}
                 durationInFrames={150}
                 compositionWidth={1920}
                 compositionHeight={1080}

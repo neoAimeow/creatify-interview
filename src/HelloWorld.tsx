@@ -3,20 +3,19 @@ import {AbsoluteFill, interpolate, Sequence, useCurrentFrame, useVideoConfig} fr
 import {Logo} from './HelloWorld/Logo';
 import {Subtitle} from './HelloWorld/Subtitle';
 import {Title} from './HelloWorld/Title';
-import {useRef} from 'react';
+import React, {useRef} from 'react';
 import Draggable from 'react-draggable';
 import {setTitlePosition} from './store/video-text-slice.ts';
+import {z} from 'zod';
 
-type HelloWorldProps = {
-    text: string;
-    audioBlobUrl?: string;
-    position: {offsetX: number; offsetY: number};
-};
+export const HelloWorldProps = z.object({
+    text: z.string(),
+    audioBlobUrl: z.string()
+});
 
-export const HelloWorld = (props: HelloWorldProps) => {
+export const HelloWorld: React.FC<z.infer<typeof HelloWorldProps>> = ({text, audioBlobUrl}) => {
     const frame = useCurrentFrame();
     const {durationInFrames, fps} = useVideoConfig();
-    const {text, audioBlobUrl, position} = props || {};
     const nodeRef = useRef(null);
 
     // Animate from 0 to 1 after 25 frames
@@ -51,7 +50,8 @@ export const HelloWorld = (props: HelloWorldProps) => {
                         setTitlePosition({offsetX, offsetY});
                     }}
                 >
-                    <AbsoluteFill ref={nodeRef} style={{top: position?.offsetY, left: position?.offsetX}}>
+                    {/*<AbsoluteFill ref={nodeRef} style={{top: position?.offsetY, left: position?.offsetX}}>*/}
+                    <AbsoluteFill ref={nodeRef}>
                         <Sequence from={35}>
                             <Title titleText={text} titleColor={'#000000'} />
                         </Sequence>

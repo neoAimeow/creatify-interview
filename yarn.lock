@@ -366,7 +366,7 @@
   resolved "https://registry.npmmirror.com/@remix-run/router/-/router-1.8.0.tgz"
   integrity sha512-mrfKqIHnSZRyIzBcanNJmVQELTnX+qagEDlcKO90RgRBVOZGSGvZKeDihTRfWcqoDn5N/NkUcwWTccnpN18Tfg==
 
-"@remotion/bundler@4.0.48":
+"@remotion/bundler@4.0.48", "@remotion/bundler@^4.0.48":
   version "4.0.48"
   resolved "https://registry.npmmirror.com/@remotion/bundler/-/bundler-4.0.48.tgz#f2b506c8301d86d1016fe697d769633e3d677909"
   integrity sha512-0Da1/PVLpUFGz47QeorXmtU0QO89qhYkdbWGWduZEsYLHyiWAShwsNwfPCvFxZLko57zB7jirLqhPqAoIJ/d6w==
@@ -445,7 +445,7 @@
   dependencies:
     remotion "4.0.48"
 
-"@remotion/renderer@4.0.48":
+"@remotion/renderer@4.0.48", "@remotion/renderer@^4.0.48":
   version "4.0.48"
   resolved "https://registry.npmmirror.com/@remotion/renderer/-/renderer-4.0.48.tgz#47649b3f8c6643a078b0654a650cf0bf0d9593d0"
   integrity sha512-DyaVmF3spuPwkRtB+Hpdf3IhOHSrI4qfmGA550YSGRD2Eay/JyO2HqlYJepark0ZVtcWge1MWlxEJ7DZi/aanA==
@@ -1861,6 +1861,11 @@ file-entry-cache@^6.0.1:
   integrity sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==
   dependencies:
     flat-cache "^3.0.4"
+
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npmmirror.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
 
 filename-reserved-regex@^2.0.0:
   version "2.0.0"
